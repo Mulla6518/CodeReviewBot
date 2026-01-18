@@ -1,0 +1,30 @@
+
+rules:
+  accessibility:
+    enabled: true
+    requireLabelsForImages: true
+    requireLabelsForButtons: true
+    minContrastChecks: false   # UI runtime checks are best in UI tests
+  concurrency:
+    enabled: true
+    warnMainActorBlocking: true
+    enforceSendable: true
+  performance:
+    enabled: true
+    flagSynchronousJSONDecodingOnMain: true
+    flagImageDecodingOnMain: true
+    maxFunctionLength: 80
+  networking:
+    enabled: true
+    requireBrotliAcceptEncoding: true
+    requireHTTP3CapableSession: false
+    requireRetryWithBackoff: true
+  tests:
+    enabled: true
+    minUnitTestFiles: 5
+    minUITestFiles: 1
+ai:
+  provider: "none"   # "none" | "openai"
+  maxTokens: 512
+  temperature: 0.2
+  promptStyle: "pr-summary"
